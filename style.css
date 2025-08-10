@@ -1,0 +1,141 @@
+/* Importing clean Google Font */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #0e0e0e;
+    color: white;
+    scroll-behavior: smooth;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: rgba(0, 0, 0, 0.8);
+    position: sticky;
+    top: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #3b82f6;
+    text-shadow: 0 0 8px #3b82f6, 0 0 15px #3b82f6;
+}
+
+.logo {
+    font-weight: 600;
+}
+
+/* Hero Section */
+header {
+    background: linear-gradient(135deg, #1e1e1e, #3b3b98);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero {
+    text-align: center;
+    margin: auto;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+}
+
+.hero span {
+    color: #3b82f6;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.7rem 1.5rem;
+    margin-top: 1rem;
+    background: #3b82f6;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #2563eb;
+    box-shadow: 0 0 8px #2563eb, 0 0 15px #2563eb;
+}
+
+/* About Section */
+main section {
+    padding: 3rem 5%;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Projects */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.project-card {
+    background: #1e1e1e;
+    padding: 1.5rem;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #111;
+    margin-top: 2rem;
+}
+section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+#bg-video {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+header > *:not(#bg-video) {
+  position: relative;
+  z-index: 1;
+}
